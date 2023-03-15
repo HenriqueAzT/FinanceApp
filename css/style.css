@@ -1,0 +1,98 @@
+body{
+  background-color: rgb(229, 229, 218);
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 5%;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.main {
+  margin-top: 90px;
+  padding-left: 30px;
+  color: rgb(1, 144, 20);
+  font-weight:700;
+  font-size: 3em;
+  text-shadow: 1px 2px 2px rgb(2, 105, 15);
+}
+
+.transaction-forms {
+  display:inline-block;
+  vertical-align: top;
+  width: 400px;
+  border-style:hidden;
+  margin: 15px;
+  padding: 30px;
+  background-color: #f1f1f1;
+  box-shadow: 2px 3px 6px 4px darkgray;
+}
+
+.transaction-forms p {
+  font-size: 30px;
+}
+
+.btndeposit {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 15px;
+  border-radius: 2px;
+  width: 110px;
+}
+
+.btndeposit:hover{
+  transform: scale(1.01);
+  box-shadow: 0 6px 4px darkgray;
+}
+
+.btnwithdraw {
+  background-color: #d21717;
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 15px;
+  border-radius: 2px;
+  width: 110px;
+}
+
+.btnwithdraw:hover{
+  transform: scale(1.01);
+  box-shadow: 0 6px 4px darkgray;
+}
+
+.balance{
+  display:inline-block;
+  vertical-align: top;
+  height: 282px;
+  margin: 15px;
+  padding: 30px;
+  text-decoration: none;
+  font-size: 70px;
+}
