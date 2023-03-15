@@ -1,10 +1,14 @@
+*{
+  font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+}
+
 body{
   background-color: rgb(229, 229, 218);
 }
 
 .navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: rgb(3, 168, 3);
   position: fixed;
   top: 0;
   width: 100%;
@@ -46,7 +50,17 @@ body{
 }
 
 .transaction-forms p {
+
+  
   font-size: 30px;
+}
+
+.transaction-buttons{
+  padding: 10px;
+}
+
+.inputNumber{
+  margin-left: 50px;
 }
 
 .btndeposit {
@@ -90,9 +104,11 @@ body{
 .balance{
   display:inline-block;
   vertical-align: top;
-  height: 282px;
-  margin: 15px;
+  width: 400;
+  height:221px;
+  margin: 20px;
   padding: 30px;
   text-decoration: none;
-  font-size: 70px;
+  font-size: 50px;
+  align-items: center;
 }

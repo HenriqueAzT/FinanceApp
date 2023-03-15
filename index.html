@@ -19,17 +19,19 @@
 
     <div class="transaction-forms">
       <form class="form" action="deposit">
-        <p>Depositar</p>
-        <input type="number" name="inputValue" id="inputValue">
-        <button class="btndeposit" id="btndeposit">Depositar</button>
-        <button class="btnwithdraw" id="btnwithdraw">Sacar</button>
+        <p>Adiconar/Retirar dinheiro</p>
+        <input type="number" name="inputValue" id="inputValue" class="inputNumber">
+        <div class="transaction-buttons">
+          <button class="btndeposit" id="btndeposit">Depositar</button>
+          <button class="btnwithdraw" id="btnwithdraw">Sacar</button>
+        </div>
       </form>
     </div>
 
     <div class="balance">
       <p>Saldo:</p>
       <div class="balance-value">
-        <p>R$ 100.00</p>
+        <p>R$ 0.00</p>
       </div>
     </div>
   <script src="./js/app.js"></script>

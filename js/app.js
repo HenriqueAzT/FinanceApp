@@ -1,35 +1,41 @@
-const form = document.querySelector('.form')
-const balanceValue = document.querySelector('.balance-value')
+const form = document.querySelector('.form');
+const balanceValue = document.querySelector('.balance-value');
+const depositButton = document.querySelector('#btndeposit');
+const withdrawButton = document.querySelector('#btnwithdraw');
+const regex = /[\d.]+/g;
 
-const depositButton = document.querySelector('#btndeposit')
-const withdrawButton = document.querySelector('#btnwithdraw')
+const updateBalance = (operation) => {
+  balanceValue.innerHTML = `<p>R$ ${Number(operation).toFixed(2)}</p>`;
+};
+
+const currentBalance = Number(balanceValue.textContent.match(regex).join(''));
 
 depositButton.addEventListener('click', event => {
-    event.preventDefault()
+  event.preventDefault();
 
-    const regex = /\d+(.\d{2})?/g
+  const inputValue = document.querySelector('#inputValue').value.trim();
+  const currentBalance = 
+    Number(balanceValue.textContent.match(regex).join(''));
+  const sum = currentBalance + Number(inputValue);
 
-    const inputValue = document.querySelector('#inputValue').value.trim()
+  updateBalance(sum);
 
-    const sum = Number(balanceValue.textContent.match(regex).join('')) + Number(inputValue);
-    balanceValue.innerHTML = `<p>R$ ${Number(sum).toFixed(2)}</p>`
-
-    form.reset()
-})
+  form.reset();
+});
 
 withdrawButton.addEventListener('click', event => {
-    event.preventDefault()
+  event.preventDefault();
 
-    const regex = /\d+(.\d{2})?/g
+  const inputValue = document.querySelector('#inputValue').value.trim();
+  const currentBalance = 
+    Number(balanceValue.textContent.match(regex).join(''));
+  const diff = currentBalance - Number(inputValue);
 
-    const inputValue = document.querySelector('#inputValue').value.trim()
+  if (diff < 0) {
+    alert('Saldo insuficiente');
+  } else {
+    updateBalance(diff);
+  }
 
-    const difference = Number(balanceValue.textContent.match(regex).join('')) - Number(inputValue);
-    if (difference < 0) {
-        alert('Saldo insuficiente')
-    } else {
-        balanceValue.innerHTML = `<p>R$ ${Number(difference).toFixed(2)}</p>`
-    }
-
-    form.reset()
-})
+  form.reset();
+});
